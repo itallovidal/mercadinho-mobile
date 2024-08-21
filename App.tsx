@@ -1,13 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
-import { NativeBaseProvider, View, Text } from 'native-base';
-import Form from './src/screens/form';
+import { NativeBaseProvider } from 'native-base';
+import AppRoutes from "./src/routes/AppRoutes";
+import {NavigationContainer} from "@react-navigation/native";
+import {THEME} from "./src/style/theme";
 
 
 export default function App() {
   return (
-      <NativeBaseProvider>
-        <StatusBar style='auto'/>
-        <Form/>
+      <NativeBaseProvider theme={THEME}>
+        <StatusBar style='light'/>
+          <NavigationContainer>
+            <AppRoutes/>
+          </NavigationContainer>
       </NativeBaseProvider>
   );
 }
