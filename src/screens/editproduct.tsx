@@ -3,7 +3,7 @@ import placeholder from '../assets/placeholder.png'
 import Header from '../components/header'
 import Button from '../components/button'
 
-export default  function Form(){
+export default  function Register(){
     return (
         <VStack pt={10} bg={'black'} flex={1}>
 
@@ -49,11 +49,11 @@ export default  function Form(){
                         bg: 'gray.700',
                         borderColor: 'purple.600'
                     }} borderWidth={3} borderColor={'purple.600'}/> */}
-                    <View borderWidth={3} borderColor={'purple.600'} maxH={200} >
+                    <View borderWidth={3} overflow={"hidden"} borderColor={'purple.600'} maxH={200} >
                         <Image maxH={200} w={'full'} alt='s' source={placeholder}/>
                     </View>
                 </VStack>
-                
+
                 <Button>Cadastrar</Button>
             </ScrollView>
         </VStack>
